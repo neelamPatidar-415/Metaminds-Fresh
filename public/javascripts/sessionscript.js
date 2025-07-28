@@ -3,6 +3,7 @@ const timeleft = document.getElementById("timeleft");
 const totaltime = document.getElementById("totaltime");
 const pausebtn = document.getElementById("pausebtn");
 const bgVideo = document.getElementById("bgVideo");
+const phaseSubText = document.getElementById("phaseSubText");
 // const canvasEle = document.getElementById("doodleCanvas");
 const timerbar = document.getElementById("timerbar");
 
@@ -17,15 +18,6 @@ const config = {
     theme : Session.theme.themeName,
 };
 
-// console.log(Session.duration);
-// console.log(Session.breakType);
-// console.log(Session.theme.themeName);
-// console.log(Session.theme.firstaudio);
-// console.log(Session.theme.animation);
-// https://drive.google.com/file/d/1ihv6LgdIVuV5TkhAoSB0ty_hKaitUnLl/view?usp=drive_link
-// 'https://drive.google.com/uc?export=download&id=1D8IwG0fiO8BvrV_rw1A_bMk7rEQMVCyz'
-
-
 const videos = {
     session: Session.theme.animation,
     // secondsession: Session.theme.animation,
@@ -35,14 +27,6 @@ const videos = {
     walking:  'https://raw.githubusercontent.com/neelamPatidar-415/session-audio-video-assets/main/assets/default%20themes/videos/walking.mp4',
 };
 
-// const sounds = {
-//     firstsession : new Howl({src:[Session.theme.firstaudio], loop:true}),
-//     secondsession : new Howl({src:[Session.theme.secondaudio], loop:true}),
-//     walking : new Howl({src:['/assets/default/audio/walking.mp3'], loop:true}),
-//     breathing : new Howl({src:['/assets/default/audio/breathing.mp3'], loop:true}),
-//     doodling : new Howl({src:['/assets/default/audio/doodling.mp3'], loop:true}),
-//     tick : new Howl({src:['/assets/default/audio/tick.mp3'], loop:true}),  
-// };
 const sounds = {
     firstsession : new Howl({src:[Session.theme.firstaudio], loop:true}),
     secondsession : new Howl({src:[Session.theme.secondaudio], loop:true}),
@@ -189,25 +173,31 @@ function startSession(label, duration, subText){
 function startBreak(subText){
     phaseheading.innerText = `🍵Break - ${config.breakType}`;
     // phaseSubText.innerText = subText;
+    if(config.breakTime === 0){
+      nextPhase();
+      return;
+    }
 
     let video;
-    if(breakType === "doodle") {
+    if(config.breakType === "doodle") {
         phaseSubText.innerText = "Keep doodling. Repeat simple patterns — it calms the mind and builds focus. No pressure to make it pretty.";
         video = videos.doodling;
         playMedia(video, "doodling");
     }
-    else if(breakType === "walk") {
+    else if(config.breakType === "walk") {
         phaseSubText.innerText = "Take this moment to walk with intention. Avoid the scroll — let your mind breathe as your body moves.";
         video = videos.walking;
         playMedia(video, "walking");
     }
-    else if(breakType === "breath"){
+    else if(config.breakType === "breath"){
         phaseSubText.innerText = "Sit tall. Breathe slow. Let your body relax with every exhale — this is how clarity begins.";
         video = videos.breathing;
         playMedia(video, "breathing");
     }
-    remainingTime = config.breakTime*60;
-    totaltime.innerText = `${Math.floor(remainingTime/60).toString().padStart(2, "0")}:00`;
+
+    remainingTime = config.breakTime * 60;
+    totalduration = config.breakTime * 60;
+    totaltime.innerText = `${Math.floor(remainingTime / 60).toString().padStart(2, "0")}:00`;
     updateTime();
     startTimer();
 }

@@ -21,9 +21,7 @@
       </div>
     </div> 
 
-  <div id="form" class="bg-[#fce375] shadow-2xl rounded-xl p-10 w-full max-w-4xl flex flex-col md:flex-row gap-8 hidden ">
-    
-    <% if((typeof(error) !=="undefined" ) && error.length> 0) { %>
+     <% if((typeof(error) !=="undefined" ) && error.length> 0) { %>
         <div id="error-box"
             class="z-[999]  absolute top-5 left-1/2 -translate-x-1/2 -translate-y-1/2 p-3 rounded-md bg-red-500">
             <span class="inline-block mt-1 mb-1 text-white">
@@ -42,6 +40,7 @@
                 </div>
                 <% } %>
 
+  <div id="form" class="bg-[#fce375] shadow-2xl rounded-xl p-10 w-full max-w-4xl flex flex-col md:flex-row gap-8 hidden ">
     <!-- Register Section -->
     <div id="registerForm" class="flex-1 hidden">
       <h2 class="text-xl font-semibold mb-2">Register</h2>
