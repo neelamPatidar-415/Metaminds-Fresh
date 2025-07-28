@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Session</title>
+    <link rel="stylesheet" href="/output.css" /> <!-- Correct path -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+   <style>
+      .dark-text * {
+         color: white !important;
+      }
+   </style>
+
+</head>
+<body class="m-0 p-0 bg-[#fffdfd] max-h-screen w-[100%]">
+
+   <!-- //overlay asking btn -->
+   <div id="startOverlay"
+      class="fixed top-0 left-0 w-full h-full bg-black text-white flex flex-col items-center justify-center z-50">
+      <h1 class="text-white font-medium text-2xl px-4 py-2 text-center">HERE IS YOUR CUSTOMIZED STUDY PLAN </h1>
+     <ul class="list-none text-black text-xl font-medium text-center">
+        <li class="bg-[#FFDE70] border-[2px] border-black px-3 py-2 my-4 "><a href="##">1ST SESSION : <%= (Session.duration - breakduration)/2 %>  minutes </a></li>
+        <li class="bg-[#FFDE70] border-[2px] border-black px-3 py-2 my-4"><a href="##">BREAK : <%= breakduration %>  minutes</a></li>
+        <li class="bg-[#FFDE70] border-[2px] border-black px-3 py-2 my-4"><a href="">2ND SESSION : <%= (Session.duration - breakduration)/2 %>  minutes</a></li>
+     </ul>
+      <h1 class="text-3xl mb-6">🎧 Ready to vibe?</h1>
+      <button id="startBtn"
+         class="bg-[#00b894] hover:bg-[#019874] text-white text-xl px-6 py-3 rounded-xl shadow-lg transition-all">
+         Start My Focus Session
+      </button>
+   </div>
+
+   <!-- //navbar -->
+   <nav class="flex justify-between items-center p-4 text-black mx-7">
+      <a href="/" class="bg-black text-white border-2 border-white font-normal px-4 py-2 rounded-md shadow">HOME</a>
+      <!-- //logo -->
+      <img class="h-[70px] w-[150px] md:h-[80px] md:w-[190px] mt-1 " src="/images/MetaMinds_ Logo white....png" alt="MetaMinds">
+   </nav>
+
+   <div class=" flex justify-between mx-10 my-5 text-lg md:text-2xl ">
+      <a class="px-1 py-1 md:px-2 md:py-2 bg-[#EF476F] w-[100px] h-[40px] md:w-[150px] md:h-[50px] text-center" href="javascript:location.reload()">RESTART</a>
+      <a class="px-1 py-1 md:px-2 md:py-2 bg-[#43AA8B] w-[100px] h-[40px] md:w-[150px] md:h-[50px] text-center" href="/">STOP</a>
+   </div>
+
+   <!-- video set -->
+   <video id="bgVideo" class="absolute top-0 left-0 w-full h-full object-cover z-[-1] " autoplay muted loop playinline></video>
+
+   <!-- <div class="w-full h-full flex items-center justify-center ">
+      <canvas id="doodleCanvas" width="900" height="400" class="bg-[#f1daff] border-4 border-[#bca6ff] rounded-xl shadow-xl ">
+      </canvas>
+   </div> -->
+   <!-- <canvas id="doodleCanvas" width="900" height="400"
+  class="bg-[#f1daff] border-4 border-[#bca6ff] rounded-xl shadow-xl hidden">
+</canvas> -->
+
+
+   <!-- overlay content  -->
+   <div class="text-center space-y-3 md:space-y-6 z-10 bottom-1 w-[100%] fixed z-2">
+      <h1 id="phaseheading" class="text-white text-xl md:text-3xl font-medium md:font-bold">Preparing for Session 1.....</h1>
+      <p id="phaseSubText" class="text-white text-sm md:text-xl font-normal md:font-medium mt-1 md:mt-2"></p>
+
+      <div class="relative w-[90%] mx-auto z-[-1]">
+         <div class="text-lg bg-white h-[5px] rounded-sm flex flex-col justify-center ">
+            <div id="timerbar" class=" bg-green-500 h-[3.5px] rounded-sm"></div>
+         </div>
+         <div class="flex justify-between h-[90px] absolute top-1 w-full font-medium">
+            <span id="timeleft" class="text-lg md:text-2xl text-white px-1 py-1"></span>
+            <span id="totaltime" class="text-lg md:text-2xl text-white px-1 py-1"></span>
+         </div>
+      </div>
+
+      <button id="pausebtn" class="bg-black text-white border-4 border-white font-medium px-4 py-2 rounded-full shadow">Resume</button>
+   </div>
+
+   <div id="winScreen"
+      class="hidden fixed inset-0 flex flex-col items-center justify-center bg-black text-white text-center z-50">
+      <h1 class="text-4xl font-bold mb-4"> You Did It! All Sessions Completed! 🔥🥳</h1>
+      <p class="text-xl mb-6">"Focus. Discipline. Finish line. You just lived it. Be proud of this version of you. That’s how winners are built. 💯"</p>
+      <a href="/"
+         class="bg-[#06D6A0] px-6 py-3 rounded-xl text-black text-xl font-semibold hover:bg-[#0ec39f] transition-all duration-300">
+         Back to Home 
+      </a>
+   </div>
+
+
+   <!-- <script>
+
+      if (canvas) {
+         canvas.dispose(); // clears previous fabric instance
+      }
+      canvas = new fabric.Canvas("doodleCanvas", {
+         isDrawingMode: true,
+         backgroundColor: "#fefcea",
+      });
+
+      canvas.setWidth(width);
+      canvas.setHeight(height);
+      canvas.freeDrawingBrush.width = 5;
+      canvas.freeDrawingBrush.color = "#bca6ff"; // white pen
+      // canvas.isDrawingMode = true;
+      canvas.renderAll();
+   </script> -->
+
+   <script>
+    const Session = <%- JSON.stringify(Session) %>;
+   //  const breakduration = <%= breakduration %>;
+    const breakduration = <%- JSON.stringify(breakduration) %>;
+   </script>
+
+   <script src="../javascripts/sessionscript.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METAMINDS</title>
+    <link rel="stylesheet" href="/output.css" /> <!-- Correct path -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body id="home" class="min-h-screen bg-[#2B2B2B] m-0 p-0 flex flex-col scroll-smooth scroll-pt-24">
+
+    <div class="flex-1">
+        <!-- //top main -->
+        <div class="h-auto w-full bg-[#FFDE70]" style="background-image: url('/images/bg stars.png');">
+            <!-- //navbar -->
+            <div class="fixed top-0 left-0 w-full h-auto backdrop-blur-lg shadow-md z-[2]">
+                <div class="flex justify-between items-center px-4 bg-[#2B2B2B]/80 h-[90px] border border-t-[2px] border-solid border-[#FFDE70] ">
+                <!-- //logo -->
+                <img class="h-[80px] w-[190px] mt-1 " src="/images/MetaMinds_ Logo white....png" alt="MetaMinds"> 
+                <div id="menubtn" class="text-white text-4xl cursor-pointer mr-10 font-semibold">☰</div>
+                </div>
+            </div>
+
+            <!-- //sidebar -->  
+            <!-- <div id="sidebar" class="fixed top-0 right-0 h-full w-[300px] pl-2 bg-zinc-500 text-white z-50 text-2xl transform translate-x-full transition duration-300"> -->
+            <div id="sidebar" class="fixed top-0 right-0 h-auto w-[300px] px-4 py-4 pl-2 text-white z-50 text-2xl transform translate-x-full transition-transform duration-300">
+                <div id="menuoffbtn" class="bg-[#313131] text-5xl cursor-pointer text-right rounded-t-xl">×</div>
+                <div class="text-xl text-center bg-[#313131] rounded-b-xl">
+                    <ul class="items-center space-y-2 ">
+                        <li class="border-[1.5px] hover:border-black"><a class="block" href="#home">HOME</a></li>
+                        <li class="border-[1.5px] hover:border-black"><a class="block" href="/users">REGISTER</a></li>
+                        <li class="border-[1.5px] hover:border-black"><a class="block" href="/users">LOGIN</a></li>
+                        <!-- <li class="border-[1.5px] hover:border-black"><a class="block" href="">MY PROFILE</a></li> -->
+                        <li class="border-[1.5px] hover:border-black"><a class="block" href="#learnMetaLearning">LEARN META-LEARNING</a></li>
+                        <li class="border-[1.5px] hover:border-black"><a class="block" href="/Session">START STUDYING</a></li>
+                        <li class="border-[1.5px] hover:border-black"><a class="block" href="#whatpplsay">FEEDBACK</a></li>
+                        <li class="border-[1.5px] hover:border-black"><a class="block" href="#aboutUs">ABOUT ME</a></li>
+                        <li class="border-[1.5px] hover:border-black"><a class="block" href="#contactUs">CONTACT ME</a></li>
+                        <li class="border-[1.5px] rounded-b-xl hover:border-black"><a class="block" href="/users/logout">LOGOUT</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- //main lofi gurl pic -->
+            <div class="flex flex-col md:flex-row justify-between items-center pt-36">
+                <div class="ml-3 md:ml-8 ">
+                    <h1 class="text-6xl font-bold animate-[rise_3s_ease-in-out_infinite] ">METAMINDS</h1>
+                    <p class=" text-2xl font-semibold animate-[rise_3s_ease-in-out_infinite]">Your Mind. Your Flow. Your System</p>
+                    <div class="text-black text-lg mt-7 max-w-xl leading-relaxed">
+                        <p><strong>Not just another timer.</strong> MetaMinds helps you master how you study, not just what you
+                            study.</p>
+                        <p class="mt-2">Customize your sessions, choose break styles, set the vibe with themes & audio — all while
+                            building consistency and focus.</p>
+                        <p class="mt-2">Take control. Build smarter habits. Study with intention.</p>
+                    </div>
+
+                </div>
+
+                <img id="img" src="/images/img4.png" class="h-[350px] w-[350px] md:h-[500px] md:w-[500px] rounded-md md:mr-7 mt-5 md:mt-0 mb-5 " />
+            
+                <!-- <div class="h-[500px] flex flex-col justify-center items-center mr-20 gap-3">
+                    <img id="img" src="/images/img 4.jpg" class="animate-[float_3s_ease-in-out_infinite] h-20 w-20 rounded-md mr-52" />
+                    <img id="img" src="/images/main img 1.jpg" class="animate-[float_3s_ease-in-out_infinite] h-20 w-20 rounded-md mr-[25px]" />
+                    <img id="img" src="/images/img 2.jpg" class="animate-[float_3s_ease-in-out_infinite] h-20 w-20 rounded-md mr-[16px]" />
+                    <img id="img" src="/images/img 3.jpg" class="animate-[float_3s_ease-in-out_infinite] h-20 w-20 rounded-md mr-[30px]" />
+                </div> -->
+            </div>
+        </div>
+
+        <!-- ///here is content of learn : how to learn  -->
+        <div id="learnMetaLearning" class="m-6 pt-[150px] -mt-[150px] md:pt-[100px] md:-mt-[100px]">
+            <div class=" text-white px-6 py-12 space-y-6 font-sans">
+                <strong class="text-3xl text-white block">
+                    <code class="text-yellow-400">CTRL + ALT + Learn</code> : Welcome to Metalearning
+                </strong>
+        
+                <p class="text-lg text-gray-300">Okay real talk — we all wanna learn faster.</p>
+                <p class="text-lg text-gray-300">New tech drops? <span class="text-white">We're on it.</span><br>
+                    That course your friend swears by? <span class="text-white">Bookmarked.</span><br>
+                    Another YouTube playlist? <span class="text-white">Already saved.</span>
+                </p>
+        
+                <p class="text-lg text-gray-300">But pause for a sec...</p>
+                <p class="text-lg text-yellow-400 font-semibold">When was the last time you updated your actual learning system?
+                </p>
+        
+                <p class="text-lg text-gray-300">Because here’s the catch:<br>
+                    <span class="text-white font-medium">It’s not about stacking more content.<br>
+                        It’s about tweaking the way you process all of it.</span>
+                </p>
+        
+                <p class="text-lg text-gray-300">We optimize our laptops, clear cache, use shortcuts...<br>
+                    But when it comes to our own brain?<br>
+                    <span class="text-white font-medium">Most of us still use CTRL+C learning — copy from one source, paste into
+                        memory, hope it sticks.</span>
+                </p>
+        
+                <p class="text-yellow-300 font-semibold text-lg">Nah, not anymore.</p>
+        
+                <div class="space-y-4 mt-4">
+                    <p class="text-white text-lg">Here’s a trick no one tells you:</p>
+        
+                    <p class="text-white text-lg">🌀 The brain doesn’t learn by reading, it learns by <span
+                            class="text-yellow-400 font-semibold">retrieving</span>.<br>
+                        <span class="text-gray-300">Every time you try to recall something without looking — even if you mess it
+                            up — you're rewiring stronger.</span>
+                    </p>
+        
+                    <p class="text-white text-lg">💡 Want to learn faster? Try <span
+                            class="text-yellow-400 font-semibold">switching contexts</span>.<br>
+                        <span class="text-gray-300">Don’t just study at your desk — shift locations, change browser themes, move
+                            your body.<br>
+                            Your brain links ideas to surroundings — break the pattern, boost the retention.</span>
+                    </p>
+        
+                    <p class="text-white text-lg">🧩 Another one: <span class="text-yellow-400 font-semibold">mix your topics on
+                            purpose</span>.<br>
+                        <span class="text-gray-300">This is called <span class="italic">interleaving</span>.<br>
+                            Instead of doing 10 DSA problems in a row, sprinkle in 3 DSA, 2 SQL, 1 system design.<br>
+                            It feels messier — but your brain learns to <span class="text-white font-semibold">recognize</span>,
+                            not memorize.</span>
+                    </p>
+        
+                    <p class="text-white text-lg">🎯 And here’s a banger:<br>
+                        <span class="text-yellow-300 font-semibold">If you never get confused, you’re probably not learning
+                            deeply.</span><br>
+                        <span class="text-gray-300">That mental “wait… huh?” moment? That’s growth knocking. Let it in.</span>
+                    </p>
+                </div>
+        
+                <div class="mt-8 space-y-4">
+                    <p class="text-white text-lg">It’s that moment when you realise:</p>
+                    <p class="text-yellow-400 font-medium text-lg">“Oh wait, I don’t need another 5-hour course — I need to
+                        understand how I absorb stuff best.”</p>
+                    <p class="text-gray-300 text-lg">And that’s different for everyone.<br>
+                        Some of us map things visually.<br>
+                        Some need to teach it to a wall (or a friend).<br>
+                        Some just need silence, sticky notes, and a cup of overhyped coffee ☕.
+                    </p>
+                    <p class="text-white text-lg">Once you feel it — it’s hard to unsee it.</p>
+                    <p class="text-gray-300 text-lg">Every time you pause and think, <span
+                            class="text-yellow-300 font-semibold">“Wait... what was that again?”</span> — that’s metalearning in
+                        action.<br>
+                        That tiny friction? <span class="text-white font-semibold">That’s the upgrade.</span>
+                    </p>
+                </div>
+        
+                <p class="text-lg mt-6 text-yellow-400 font-semibold">So keep scrolling.<br>
+                    Don’t just consume — <span class="underline underline-offset-2 decoration-yellow-300">observe how you
+                        consume.</span><br>
+                    That’s where metalearning begins. 🔁
+                </p>
+            </div>
+        
+        </div>
+
+        <!-- About Section -->
+        <section id="aboutUs" class="px-4 py-12 text-white max-w-5xl mx-auto flex flex-col lg:flex-row items-center gap-8 pt-[150px] -mt-[150px] md:pt-[100px] md:-mt-[100px]">
+            <div class="space-y-4 text-lg">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center lg:text-left">Behind the Code</h2>
+                <p class="text-2xl font-semibold">Hey there! I’m Neelam, the creator behind <span class="text-yellow-400">MetaMinds</span> — a space where I mix design with logic and just... figure things out as I go.</p>
+                <p>I’m diving deep into full-stack dev with an electrical engineering background — still learning tons, but already building stuff that works (and breaks sometimes 💥).</p>
+                <p>I love clean frontends, solid backends, and the rush of turning messy ideas into something that actually runs on a browser.</p>
+                <p class="font-medium text-yellow-300">Right now, I’m all about learning fast, shipping faster, and sharing the process along the way. If you're into building cool, useful things — let’s talk. Always down to collab, help, or just vibe on ideas.</p>
+            </div>
+            <img src="/images/image copy 22.png" class="h-[250px] sm:h-[350px] w-auto rounded-md" alt="My picture">
+        </section>
+
+        <!-- Feedback Section -->
+        <section id="whatpplsay" class="px-4 py-12 max-w-2xl mx-auto text-white pt-[150px] -mt-[150px] md:pt-[100px] md:-mt-[100px]">
+            <p class="text-lg font-medium mb-4">Got a minute? Share your feedback — I’d love to hear your thoughts!</p>
+            <form action="/index/submit-feedback" method="POST" class="space-y-4">
+                <textarea name="feedback" class="w-full h-40 p-3 rounded bg-[#FFDE70] text-black placeholder-gray-700 resize-none" placeholder="Your feedback here..." required></textarea>
+                <button type="submit" class="bg-white text-black px-6 py-2 rounded hover:bg-gray-200 transition">Submit Feedback</button>
+            </form>
+        </section>
+
+
+        <!-- here is contact us -->
+        <!-- Contact Us -->
+        <h2 id="contactUs" class="text-4xl font-medium mb-8 text-center text-white pt-[100px] -mt-[100px]">Let's Talk</h2>
+        <section class="bg-[#FFDE70] text-black p-8 flex flex-col gap-5 text-lg font-medium">
+            <p class="flex justify-start items-center gap-2"><a href="mailto:neelampatidar415@email.com"><i
+                        class="fa-solid fa-envelope"></i></a>
+                <a href="mailto:neelampatidar415@email.com">neelampatidar415@gmail.com</a>
+            </p>
+        
+            <p class="flex justify-start items-center gap-2"><a href="tel:+919302966541" target="_main"><i class="fa-solid fa-phone"></i></a>
+                <a href="tel:+919302966541" target="_main">+91 9302966541</a>
+            </p>
+        
+            <p class="flex justify-start items-center gap-2"><a href="https://www.linkedin.com/in/neelixdev" target="_main"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/neelixdev" target="_main">Neelam Patidar</a>
+            </p>
+        
+            <p class="flex justify-start items-center gap-2"><a href="mailto:neelampatidar415@email.com" target="_main"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="mailto:neelampatidar415@email.com" target="_main">neelampatidar415@gmail.com</a>
+            </p>
+        
+            <p class="flex justify-start items-center gap-2"><a href="https://github.com/neelamPatidar-415" target="_main"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/neelamPatidar-415" target="_main">neelamPatidar-415</a>
+            </p>
+        
+            <p class="flex justify-start items-center gap-2"><a href="https://t.me/@Neelam_patidar" target="_main"><i
+                        class="fa-brands fa-telegram"></i></a>
+                <a href="https://t.me/@Neelam_patidar" target="_main">@Neelam_patidar</a>
+            </p>
+        
+        </section>
+    </div>
+
+
+
+    <!-- here is footer  -->
+    <footer class="bg-[#2B2B2B] text-yellow-400 text-center p-4 text-xl">
+     © 2025 MetaMinds — Building brains & buttons.
+    </footer>
+ 
+    <!-- <script type="module" src="../javascripts/threejsScript.js"></script> -->
+    <script src="../javascripts/homeLinks.js"></script>
+</body>
+
+</html>
+
+
+
+        <!-- letting this feedback section for future refinement  -->
+        <!-- let's start learning 
+         <section class="flex justify-center items-center p-6">
+            <a href="/index/themes" class="rounded-full text-[#2B2B2B ] bg-[#FFDE70] border h-auto  px-4 py-1 text-3xl w-[60px]" ><i class="fa-solid fa-arrow-right"></i></a>
+         </section>
+
+        here is waht ppl say section 
+        <h2 id="whatpplsay" class="text-4xl font-medium mb-2 text-center text-white pt-[100px] -mt-[100px]">What People Say</h2>
+        <section class="bg-[#FFDE70] text-black p-6 flex flex-row gap-3 text-lg font-normal">
+            <div class=" p-4 flex-1 flex-row justify-center w-[100px]">
+                <div class="flex items-start gap-2">
+                    <img class="rounded-md"  src="##" alt="profile">
+                    <h3>neelampatidar,,,.</h3>
+                </div>
+                <div class="bg-[#2B2B2B] text-white block h-[250px] rounded-md">
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                    xxx
+                </div>
+            </div>
+
+            <div class=" p-4 flex-1 flex-row justify-center w-[100px]">
+                <div class="flex items-start gap-2">
+                    <img class="rounded-md"  src="##" alt="profile">
+                    <h3>neelampatidar,,,.</h3>
+                </div>
+                <div class="bg-[#2B2B2B] text-white block h-[250px] rounded-md">
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                    xxx
+                </div>
+            </div>
+        </section> -->
+
+
+
+          <!-- here is about me -->
+
+
+          <!-- here is ask for feedback -->
+        <!-- <section class="p-8 text-lg font-medium flex flex-col justify-center items-start gap-4 w-full max-w-[600px] mx-auto ">
+            <p class="text-white">
+                Got a minute? Share your feedback — I’d love to hear your thoughts!
+            </p>
+        
+            <form action="" method="POST" class="w-full">
+                <textarea class="h-[150px] w-full resize-none text-black bg-[#FFDE70] placeholder:text-gray-600 p-3 rounded-md"
+                    name="feedback" placeholder="Your feedback here..."></textarea>
+            </form>
+        </section> -->
+
+        <!-- //learning three.js actually -->
+     <!-- <main>
+         <div id="container3D" class="w-[50%] h-[50%] absolute top-0 left-0"></div>
+     </main> -->
+     <!-- <main class="relative w-full h-screen">
+  <div id="container3D" class="w-full h-full absolute top-0 left-0"></div>
+</main> -->
