@@ -208,6 +208,10 @@ document.getElementById("startBtn").addEventListener("click", () => {
 
   // Now safe to start audio/video
   nextPhase(); // or your main session starter
+
+  
+  window.startBreak = startBreak;
+
 });
 
 
